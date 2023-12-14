@@ -25,7 +25,7 @@
 </head>
 <body class="d-flex flex-column min-vh-100">	
 	<div class="navbar navbar-expand-lg" style="height: 100px;"></div>
-	<header class="navbar navbar-expand-lg fixed-top" style="background-color: white;">
+	<header class="navbar navbar-expand-lg fixed-top" style="background-color: rgb(238, 231, 218);">
 		<a href="#" class="animate__animated animate__rollIn"><img src="${ pageContext.request.contextPath }/resources/img/9.gif.gif" alt="" width="30" height="30"></a>
         <!-- Sidebar Toggle (Topbar) -->
         	<button id="sidebarToggleTop" class="btn btn-link d-md-none rounded-circle mr-3">
