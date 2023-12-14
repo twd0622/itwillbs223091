@@ -11,12 +11,11 @@
 	<link rel="stylesheet" href="${ pageContext.request.contextPath }/resources/css/bootstrap.min.css">
     <title>SideBar sub menus</title>
 </head>
-<body class="d-flex flex-column min-vh-100" style="padding: 1rem 0 0 5.75rem;">
-    <div class="l-navbar" id="navbar">
+<body class="d-flex flex-column min-vh-100" style="padding: 0 0 0 240px; background:#f0f0f3;">
+    <div class="l-navbar expander" id="navbar">
         <nav class="nav">
             <div>
                 <div class="nav__brand">
-                    <ion-icon name="menu-outline" class="nav__toggle" id="nav-toggle"></ion-icon>
                     <a href="#" class="nav__logo">Bedimcode</a>
                 </div>
                 <div class="nav__list">

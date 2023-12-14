@@ -23,9 +23,8 @@
 	<link rel="canonical" href="https://getbootstrap.com/docs/5.3/examples/modals/">
     <style type="text/css">:root {color-scheme: light only;}</style>
 </head>
-<body class="d-flex flex-column min-vh-100">	
-	<div class="navbar navbar-expand-lg" style="height: 100px;"></div>
-	<header class="navbar navbar-expand-lg fixed-top" style="background-color: rgb(238, 231, 218);">
+<body class="d-flex flex-column min-vh-100" style="background:#f0f0f3">
+	<header class="navbar navbar-expand-lg fixed-top" style="background-color: rgb(238, 231, 218);padding:0;">
 		<a href="#" class="animate__animated animate__rollIn"><img src="${ pageContext.request.contextPath }/resources/img/9.gif.gif" alt="" width="30" height="30"></a>
         <!-- Sidebar Toggle (Topbar) -->
         	<button id="sidebarToggleTop" class="btn btn-link d-md-none rounded-circle mr-3">
@@ -94,4 +93,4 @@
 	<!-- Bootstrap core JS-->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
     <!-- Core theme JS-->
-    <script src="${ pageContext.request.contextPath }/resources/js/scripts.js"></script>   
+    <script src="${ pageContext.request.contextPath }/resources/js/scripts.js"></script>

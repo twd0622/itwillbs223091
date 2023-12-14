@@ -6,7 +6,7 @@
     <meta charset="utf-8">
     <title>현재 페이지 타이틀</title>
 </head>
-	<%@ include file="/navibar/sidebar_open.jsp"%> 	
+	<%@ include file="/Template/store_sidebar_open.jsp"%> 	
 	
 		<h1>UI 만들기 전에 한 번 실핼해보세요.</h1>
     	<h2>테스트용 무조건 가운데 정렬</h2>
@@ -15,7 +15,7 @@
 		<main class="" style="display: flex; justify-content: center; align-items: center; text-align: center;">
     		여기 넣으면 무조건 가운데 정렬
     	</main>	
-	<%@ include file="/navibar/sidevar_close.jsp"%> 	
+	<%@ include file="/Template/store_sidevar_close.jsp"%> 	
 </html> 
 <%--   * @FileType : 관리자, 사장 전용  --%>
 

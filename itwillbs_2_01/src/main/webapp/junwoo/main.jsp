@@ -12,7 +12,7 @@
         <link href="${ pageContext.request.contextPath }/resources/css/main.css" rel="stylesheet" />
 </head>
 
-<%@ include file="/navibar/header.jsp"%> 
+<%@ include file="/Template/header.jsp"%> 
 	<div class="masthead" style="background-image: url('${ pageContext.request.contextPath }/resources/img/header-bg.jpg'); height:300px; display: flex; justify-content: center; align-items: center; text-align: center;">
     	<div class="container">
 			<div class="text-center text-white">
@@ -33,7 +33,7 @@
         	</div>
     	</div>
     </div>
-	<main class="" style="display: flex; justify-content: center; align-items: center; text-align: center;">
+	<main style="display: flex; justify-content: center; align-items: center; text-align: center; ">
 		<!-- 여기에 바디내용 넣기 -->
 		<section class="page-section bg-light" id="portfolio">
             <div class="container">
@@ -180,7 +180,7 @@
 	</main>
     <script src="/itwillbs_2_01/resources/js/main.js"></script>
     <script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
-<%@ include file="/navibar/footer.jsp"%>
+<%@ include file="/Template/footer.jsp"%>
 <div class="portfolio-modal modal fade" id="portfolioModal1" tabindex="-1" role="dialog" aria-hidden="true">
             <div class="modal-dialog">
                 <div class="modal-content">

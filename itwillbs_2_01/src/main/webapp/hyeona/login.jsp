@@ -85,8 +85,8 @@
     </style>
 
   </head>
-	 <%@ include file="/navibar/header.jsp"%> 
-	 	<main class="" style="display: flex; justify-content: center; align-items: center; text-align: center;">
+	 <%@ include file="/Template/header.jsp"%> 
+	 	<main style="display: flex; justify-content: center; align-items: center; text-align: center; margin-top: 68.5px; padding:20px 0 50px 0; background:white;">
 			<div class="position-static d-block bg-body p-4 py-md-5" tabindex="-1" role="dialog" id="modalSignin" style="width:500px;" >
 				<div class="modal-dialog" role="document">
 					<div class="modal-content rounded-4 shadow">
@@ -123,5 +123,5 @@
 				</div>
 			</div>
 		</main>
-	 <%@ include file="/navibar/footer.jsp"%> 
+	 <%@ include file="/Template/footer.jsp"%> 
 </html>
