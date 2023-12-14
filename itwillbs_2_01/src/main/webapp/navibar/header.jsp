@@ -26,7 +26,7 @@
 <body class="d-flex flex-column min-vh-100">	
 	<div class="navbar navbar-expand-lg" style="height: 100px;"></div>
 	<header class="navbar navbar-expand-lg fixed-top" style="background-color: white;">
-		<a href="#" class="animate__animated animate__rollIn"><img src="/itwillbs_2_01/resources/img/9.gif.gif" alt="" width="30" height="30"></a>
+		<a href="#" class="animate__animated animate__rollIn"><img src="${ pageContext.request.contextPath }/resources/img/9.gif.gif" alt="" width="30" height="30"></a>
         <!-- Sidebar Toggle (Topbar) -->
         	<button id="sidebarToggleTop" class="btn btn-link d-md-none rounded-circle mr-3">
                         <i class="fa fa-bars"></i>
