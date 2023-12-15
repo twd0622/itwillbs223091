@@ -1,3 +1,5 @@
+<!-- 12-15 18:14 이재원+공지 작성 페이지 만듦 -->
+
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 <%@page
@@ -6,7 +8,7 @@
 <html>
 <head>
 <meta charset="utf-8">
-<title>공지사항 수정</title>
+<title>공지사항 작성</title>
 </head>
 
 <%@ include file="/Template/admin_sidebar_open.jsp"%>
@@ -18,7 +20,7 @@
 		style="border: 1px solid black; width: 100%; height: 850px; background: white;">
 		<form method="post" action="contentWriteProcess.jsp">
 			<div class="container" style="padding: 30px;">
-				<h1>공지사항 수정</h1>
+				<h1>공지사항 작성</h1>
 				<table class="table table-hover">
 					<tbody>
 						<tr>
@@ -40,7 +42,7 @@
 						</tr>
 					</tbody>
 				</table>
-				<input type="submit" class="btn btn-primary pull-right" value="수정">
+				<input type="submit" class="btn btn-primary pull-right" value="등록">
 				<input type="button" class="btn btn-primary pull-right" value="취소" onclick="window.history.back()">
 			</div>
 		</form>
