@@ -83,6 +83,86 @@
         display: block !important;
       }
     </style>
+<script src="https://t1.kakaocdn.net/kakao_js_sdk/2.5.0/kakao.min.js" 
+		integrity="sha384-kYPsUbBPlktXsY6/oNHSUDZoTX6+YI51f63jCPEIPFP09ttByAdxd2mEjKuhdqn4" 
+		crossorigin="anonymous"></script>
+<script>
+// SDK 초기화 - 사용하려는 앱의 JavaScript 키 입력		
+Kakao.init('a7cba1ba5ddd97c09d319895bb3e67f2'); 
+// SDK 초기화 여부 판단
+console.log(Kakao.isInitialized());
+
+
+
+  function loginWithKakao() {
+    Kakao.Auth.authorize({
+      redirectUri: 'http://localhost:8080/StudyJavascript/api/success.html',  // 로그인 후 인가 Code를 받을 주소
+      state: 'userme',
+    });
+  }
+  
+  function requestUserInfo() {
+    Kakao.API.request({
+      url: '/v2/user/me',
+    })
+      .then(function(res) {
+        alert(JSON.stringify(res));
+      })
+      .catch(function(err) {
+        alert(
+          'failed to request user information: ' + JSON.stringify(err)
+        );
+      });
+  }
+
+  // 데모를 위한 UI 코드
+  displayToken()
+  function displayToken() {
+    var token = getCookie('authorize-access-token');
+
+    if(token) {
+      Kakao.Auth.setAccessToken(token);
+      Kakao.Auth.getStatusInfo()
+        .then(function(res) {
+          if (res.status === 'connected') {
+            document.getElementById('token-result').innerText
+              = 'login success, token: ' + Kakao.Auth.getAccessToken();
+          }
+        })
+        .catch(function(err) {
+          Kakao.Auth.setAccessToken(null);
+        });
+      document.querySelector('button.api-btn').style.visibility = 'visible';  // 생략 O
+    }
+  }
+
+  function getCookie(name) {
+    var parts = document.cookie.split(name + '=');
+    if (parts.length === 2) { return parts[1].split(';')[0]; }
+  }
+</script>
+
+<script>
+$.ajax({
+    type : "POST"
+    , url : 'https://kauth.kakao.com/oauth/token'
+    , data : {
+        grant_type : 'authorization_code',
+        client_id : '본인이 할당받은 key입력',
+        redirect_uri : 'http://localhost:8080/login',
+        code : kakaoCode
+    }
+    , contentType:'application/x-www-form-urlencoded;charset=utf-8'
+    , dataType: null
+    , success : function(response) {
+        Kakao.Auth.setAccessToken(response.access_token);
+        document.querySelector('button.api-btn').style.visibility = 'visible';
+    }
+    ,error : function(jqXHR, error) {
+
+    }
+});
+</script>
 
   </head>
 	 <%@ include file="/Template/header.jsp"%> 
@@ -95,7 +175,13 @@
 						</div>
 						<div class="modal-body p-5 pt-0">
 							<form class="" style="text-align: center;">
-								<button class="w-100 py-2 mb-2 btn btn-warning rounded-3"type="submit" style="font-size: 19px;">
+								<a id="kakao-login-btn" href="javascript:loginWithKakao()">
+								  <img src="https://k.kakaocdn.net/14/dn/btroDszwNrM/I6efHub1SN5KCJqLm1Ovx1/o.jpg" width="350" height="60"
+								    alt="카카오 로그인 버튼" />
+								</a>
+								<p id="token-result"></p>
+								
+								<button id="kakao-login-btn" class="w-100 py-2 mb-2 btn btn-warning rounded-3"type="submit" style="font-size: 19px;">
 									<img src="${ pageContext.request.contextPath }/resources/img/kakao.png" style="width:40px; height:40px;"/> kakao 계정 로그인
 								</button>
 								<button class="w-100 py-2 mb-2 btn btn-outline-secondary rounded-3"
