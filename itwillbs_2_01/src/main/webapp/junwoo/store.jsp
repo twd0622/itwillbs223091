@@ -7,23 +7,35 @@
     <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
     <!-- 식당 이름으로 타이틀 지정 -->
     <title>식당 상세 페이지</title>
+	<link href="css/store.css" rel="stylesheet" >
 </head>
 
 <%@ include file="/Template/header.jsp"%> 
 	<!-- main은 속성 값은 왠만하면 건들지x -->
-	<main style="display: flex; justify-content: center; align-items: center; text-align: center; margin-top: 68.5px; padding:20px 0 50px 0; ">
+	<main style="display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; margin-top: 68.5px; padding:20px 0 50px 0;">
 		
 		<!-- 예시div style속성 값 조절해서 사용! -->
-		<div class="mainContainer" style="border: 1px solid black; width: 940px; height: 1000px; background:white ">
-			<div class="bannerBox"  style="width:95%; height:330px; padding:20px 0 20px 0; margin: 0 auto;">
-				<div class="banner" style="border: 1px solid black; width:100%; height: 100%; background: orange; text-align: center; line-height : 300px; margin-bottom: 28px">식당 사진</div>
-				<div class="tit-point" style="margin-bottom: 15px; text-align: left;">
+		<div class="main_container">
+			<div class="store_profile">
+				<div class="bannerBox">
+					<div class="banner">
+						<div class="banner_img_box">
+							<img alt="칸다소바.jpg" src="칸다소바.jpg" class="banner_img">
+						</div>
+						
+						<div class="banner_img_box">
+							<img alt="음식1.jpg" src="음식1.jpg" class="banner_img">
+						</div>
+						
+					</div>
+				</div>					
+				<div class="tit-point">
 					<h1>칸다 소바</h1>
 				</div>
-				<div class="store_category" style="margin-bottom: 20px; line-height: 100%; font-size: 16px; color: #66666e; text-align: left;">
+				<div class="store_category">
 					<p>일식 | 라멘</p>
 				</div>
-				<div class="store_score" style="margin-bottom: 20px; text-align: left;">
+				<div class="store_score">
 					<p>
 						<strong style="font-size:18px; vertical-align:middle; padding-right:8px;">86점</strong>
 						<span style="font-size: 13px; color: #66666e; margin-right: 5px;">
@@ -32,20 +44,159 @@
 								4.0점
 							</strong>
 						</span>
-						
-						<span class="material-symbols-outlined md-dark" style="font-size: 30px; vertical-align:middle;">grade</span>
-						<span class="material-symbols-outlined" style="font-size: 30px; vertical-align:middle;">grade</span>
-						<span class="material-symbols-outlined" style="font-size: 30px; vertical-align:middle;">grade</span>						
-						<span class="material-symbols-outlined" style="font-size: 30px; vertical-align:middle;">grade</span>
-						<span class="material-symbols-outlined" style="font-size: 30px; vertical-align:middle;">grade</span>												
+						<span class="material-symbols-outlined grade_icon">grade</span>
+						<span class="material-symbols-outlined grade_icon">grade</span>
+						<span class="material-symbols-outlined grade_icon">grade</span>
+						<span class="material-symbols-outlined grade_icon">grade</span>
+						<span class="material-symbols-outlined grade_icon">grade</span>
 					</p>
 				</div>
+				<div class="profile_btnBox">
+					<div class="profile_btn_sec" style="border-right: 2px solid #f0f0f0;">
+						<a href="#" onclick="" class="profile_btn">
+							<span class="material-symbols-outlined profile_btn_icon" class="profile_btn_icon">favorite</span>
+							<span class="profile_btn_text">찜하기</span>
+						</a>
+					</div>
+					<div class="profile_btn_sec" style="border-right: 2px solid #f0f0f0;">
+						<a href="#" onclick="" class="profile_btn">
+							<span class="material-symbols-outlined profile_btn_icon" class="profile_btn_icon">map</span>
+							<span class="profile_btn_text">위치 보기</span>
+						</a>
+					</div>
+					<div class="profile_btn_sec">
+						<a href="#" onclick="" class="profile_btn">
+							<span class="material-symbols-outlined profile_btn_icon" class="profile_btn_icon">edit</span>
+							<span class="profile_btn_text">리 뷰</span>
+						</a>
+					</div>
+				</div>
 			</div>
-
-
-
 		</div>
-		
+		<p class="gap20"></p>
+		<div class="main_container">
+			<div class="store_detail">
+				<!-- 영업 시간 -->
+				<div class="busi-hours-today">
+					<p class="tit">영업시간</p>
+					<ul class="list">
+						<li>
+							<p class="l-txt"><strong>화 ~ 목</strong></p>
+							<p class="r-txt">영업시간: 11:30 - 21:30</p>
+						</li>
+						<li>
+						  <p class="l-txt"> </p>
+						  <p class="r-txt">브레이크타임: 15:30 - 17:00</p>
+						</li>
+              			<li>
+  							<p class="l-txt"> </p>
+  							<p class="r-txt">라스트오더: 21:00</p>
+						</li>
+					</ul>
+					<hr class="hr">
+					<ul class="list">
+						<li>
+							<p class="l-txt"><strong>금 ~ 일</strong></p>
+							<p class="r-txt">영업시간: 11:30 - 21:30</p>
+						</li>
+						<li>
+						  <p class="l-txt"> </p>
+						  <p class="r-txt">브레이크타임: x </p>
+						</li>
+              			<li>
+  							<p class="l-txt"> </p>
+  							<p class="r-txt">라스트오더: 22:00</p>
+						</li>
+					</ul>
+					<hr class="hr">
+					<ul class="list">
+						<li>
+							<p class="l-txt"><strong>월</strong></p>
+							<p class="r-txt">정기 휴무</p>
+						</li>
+					</ul>					
+				</div>
+				<!-- 메뉴 -->
+				<div class="menuBox">
+					<p class="tit">메뉴정보</p>
+						<ul class="list Restaurant_MenuList">
+							<li>
+								<p class="l-txt Restaurant_MenuItem"><span class="Restaurant_Menu">츠케멘</span></p>
+								<p class="r-txt Restaurant_MenuPrice">12,000원</p>
+							</li>
+							<li>
+								<p class="l-txt Restaurant_MenuItem"><span class="Restaurant_Menu">이에케 돈코츠 라멘</span></p>
+								<p class="r-txt Restaurant_MenuPrice">11,000원</p>
+							</li>
+							<li>
+								<p class="l-txt Restaurant_MenuItem"><span class="Restaurant_Menu">마제소바</span></p>
+								<p class="r-txt Restaurant_MenuPrice">10,000원</p>
+							</li>
+							<li>
+								<p class="l-txt Restaurant_MenuItem"><span class="Restaurant_Menu">아부라소바</span></p>
+								<p class="r-txt Restaurant_MenuPrice">10,000원</p>
+							</li>
+							<li>
+								<p class="l-txt Restaurant_MenuItem"><span class="Restaurant_Menu">돼지껍데기 아부라소바</span></p>
+								<p class="r-txt Restaurant_MenuPrice">12,500원</p>
+							</li>
+						</ul>
+				</div>
+				<!-- 테이블 -->
+				<div class="tableBox">
+					<p class="tit">테이블 예약</p>
+					<ul class="list">
+						<li>
+							<div class="table_">
+								<div class="table_img"></div>
+								<div class="table_info" >
+									<div class="table_name_box">
+										<p class="table_name">A1</p>
+										<a style="text-align: right; font-size: 15px; line-height: 100%">상세 보기 ></a>
+									</div>
+									<div class="table_res">
+										<div style="width: 80%; height: 100%; line-height: 100%;">
+											<ul>
+												<li>최소인원: 2명</li>
+												<li>최대인원: 4명</li>
+												<li>뷰: 오션뷰</li>
+											</ul>
+										</div>
+										<div style="width: 20%;">
+											<button class="btn btn-outline-warning" style="margin-top:80%">예약하기</button>
+										</div>
+									</div>
+								</div>
+							</div>
+						</li>
+						<li>
+							<div class="table_">
+								<div class="table_info" >
+									<div class="table_name_box">
+										<p class="table_name">A1</p>
+										<a style="text-align: right; font-size: 15px; line-height: 100%">상세 보기 ></a>
+									</div>
+									<div class="table_res">
+										<div style="width: 80%; height: 100%; line-height: 100%;">
+											<ul>
+												<li>최소인원: 2명</li>
+												<li>최대인원: 4명</li>
+												<li>뷰: 오션뷰</li>
+											</ul>
+										</div>
+										<div style="width: 20%;">
+											<button class="btn btn-outline-warning" style="margin-top:60%">예약하기</button>
+										</div>
+									</div>
+								</div>
+							</div>
+						</li>
+					</ul>
+				</div>	
+			</div>
+		</div>
 	</main>
+	
+	
 <%@ include file="/Template/footer.jsp"%>
 </html> 
