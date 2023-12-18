@@ -1,4 +1,4 @@
-<!-- 12-15 18:14 이재원+관리자 공지 상세조회 페이지 만듦 -->
+<!-- 12-18 16:47 이재원 - 페이지 전체적 수정 -->
 
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
@@ -19,10 +19,10 @@
 	<!-- 예시div style속성 값 조절해서 사용! -->
 
 	<div class="mainContainer"
-		style="border: 1px solid black; width: 100%; height: 850px; background: white;">
+		style="width: 100%; height: 850px; background: white;">
 	<div class="container" style="padding: 30px;">
-		<h1>공지사항 상세조회</h1>
-
+		<h1 style="text-align: left; padding: 20px;">공지사항 상세조회</h1>
+		<hr>
 		<table class="table table-hover">
 
 			<tbody>
@@ -69,7 +69,7 @@
 			</tbody>
 		</table>
 		</div>
-		<a href="admin_userCheck.jsp" class="btn btn-primary">목록</a>
+		<a href="admin_noticeCheck.jsp" class="btn btn-primary">목록</a>
 		<input type="submit" class="btn btn-primary pull-right" value="수정">
 		<input type="button" class="btn btn-primary pull-right" value="취소" onclick="window.history.back()">
 	</div>

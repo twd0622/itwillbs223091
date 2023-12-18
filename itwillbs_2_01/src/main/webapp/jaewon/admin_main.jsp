@@ -1,4 +1,4 @@
-<!-- 12-15 18:14 이재원+식당 메인 페이지 만듦 -->
+<!-- 12-18 16:47 이재원 - 페이지 전체적 수정 -->
 
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
@@ -76,7 +76,7 @@ a:active {
 	<!-- 예시div style속성 값 조절해서 사용! -->
 	<div class="grid-container"
 		style="width: 100%; height: 850px; background: white; padding: 80px;">
-		
+
 		<div class="grid-item" id="item1" style="padding: 30px;">
 			<h2><a href="admin_noticeCheck.jsp" class="notice" style="text-decoration: none;">최근 공지사항</a></h2>
 			<hr>
@@ -89,14 +89,14 @@ a:active {
 			<iframe src="admin_storeCheck.jsp" style="padding: 30px;"></iframe>
 		</div>
 		<div class="grid-item" id="item3" style="padding: 30px;">
-			<h2><a href="admin_userReviewReport.jsp" class="notice" style="text-decoration: none;">고객 신고관리</a></h2>
+			<h2><a href="admin_userReport.jsp" class="notice" style="text-decoration: none;">리뷰 신고관리</a></h2>
 			<hr>
-			<iframe src="admin_userReviewReport.jsp" style="padding: 30px;"></iframe>
+			<iframe src="admin_userReport.jsp" style="padding: 30px;"></iframe>
 		</div> 
 		<div class="grid-item" id="item4" style="padding: 30px;">
-			<h2><a href="admin_noticeWrite.jsp" class="notice" style="text-decoration: none;">점주 신고관리</a></h2>
+			<h2><a href="admin_storeReport.jsp" class="notice" style="text-decoration: none;">식당 신고관리</a></h2>
 			<hr>
-			<iframe src="admin_noticeWrite.jsp" style="padding: 30px;"></iframe>
+			<iframe src="admin_storeReport.jsp" style="padding: 30px;"></iframe>
 		</div>
 	</div>
 </main>

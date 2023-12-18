@@ -1,4 +1,4 @@
-<!-- 12-15 18:14 이재원+식당 조회 페이지 만듦 -->
+<!-- 12-18 16:47 이재원 - 페이지 전체적 수정 -->
 
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
@@ -17,7 +17,8 @@
 		style="width: 100%; height: 850px; background: white;">
 		<form method="post" action="contentWriteProcess.jsp">
 			<div class="container" style="padding: 30px;">
-				<h1>식당 조회</h1>
+				<h1 style="text-align: left; padding: 20px;">식당 조회</h1>
+				<hr>
 				<table class="table table-hover">
 					<thead>
 						<tr>
@@ -30,7 +31,7 @@
 					<tbody>
 						<tr>
 							<td>4</td>
-							<td>987-65-43219</td>
+							<td><a href="admin_storeDetail.jsp" class="notice">987-65-43219</a></td>
 							<td> 
 								칸다소바 <br>
 								051-111-1111 <br>
@@ -41,7 +42,7 @@
 						</tr>
 						<tr>
 							<td>3</td>
-							<td>159-45-73852</td>
+							<td><a href="admin_storeDetail.jsp" class="notice">159-45-73852</a></td>
 							<td>
 								미진축산 <br>
 								051-222-2222 <br>
@@ -52,7 +53,7 @@
 						</tr>
 						<tr>
 							<td>2</td>
-							<td>357-45-97852</td>
+							<td><a href="admin_storeDetail.jsp" class="notice">357-45-97852</a></td>
 							<td>
 								곱전당 <br>
 								051-333-3333 <br>
@@ -63,7 +64,7 @@
 						</tr>
 						<tr>
 							<td>1</td>
-							<td>277-55-31275</td>
+							<td><a href="admin_storeDetail.jsp" class="notice">277-55-31275</a></td>
 							<td>
 								소인수분해 <br>
 								051-444-4444 <br>
