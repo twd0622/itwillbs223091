@@ -222,7 +222,7 @@
 	<div id="modalContainer" class="hidden">
 	  <div id="modalContent">
 	     <h4>예약</h4>
-	     <form action="">
+	     <form action="menuChoice.jsp" method="post">
 		     <div>
 		     	<h5>인원</h5>
 		     	<div>
