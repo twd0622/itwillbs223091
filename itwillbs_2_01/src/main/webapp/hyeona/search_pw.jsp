@@ -118,7 +118,7 @@
 				  <!-- 인증번호 받기 선택하면 인증번호 칸 뜨도록 설정 -->
 				  <div class="form-outline mb-4">
 				  	<div style="text-align: left;"> <label>인증번호</label> </div>
-				    	<input type="number" id="idcode" class="form-control" />
+				    	<input type="text" id="idcode" class="form-control" />
 				  </div>
 				  
 				  <button type="submit" class="btn btn-primary btn-block mb-4"

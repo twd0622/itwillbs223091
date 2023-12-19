@@ -101,15 +101,15 @@
 				<form class="" style="text-align: center;">
 				  <div class="form-outline mb-4">
 				  	<div style="text-align: left;"> <label>아이디</label> </div>
-				    	<input type="text" id="OWN_ID" class="form-control" />
+				    	<input type="text" id="OWN_ID" class="form-control"  placeholder="영문, 글자 포함 최소 6자리 이상"/>
 				  </div>
 				  <div class="form-outline mb-4">
 				  	<div style="text-align: left;"> <label>비밀번호</label> </div>
-				    	<input type="password" id="OWN_PW" class="form-control" />
+				    	<input type="password" id="OWN_PW" class="form-control" placeholder="영문 대소문자, 숫자, 기타문자 포함 8~14자리"/>
 				  </div>
 				  <div class="form-outline mb-4">
 				  	<div style="text-align: left;"> <label>비밀번호 확인</label> </div>
-				    	<input type="password" id="OWN_PWCHECK" class="form-control" />
+				    	<input type="password" id="OWN_PWCHECK" class="form-control" placeholder="비밀번호를 다시 작성해 주세요."/>
 				  </div>
 				  <div class="form-outline mb-4">
 				  	<div style="text-align: left;"> <label>이름</label> </div>

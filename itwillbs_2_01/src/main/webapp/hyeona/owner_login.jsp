@@ -106,7 +106,7 @@
 
 				<div class="form-outline mb-4">
 				  	<div style="text-align: left;"> <label>아이디</label> </div>
-				    	<input type="text" id="OWN_ID" class="form-control" />
+				    	<input type="text" id="OWN_ID" class="form-control"/>
 				  </div>
 				  <div class="form-outline mb-4">
 				  	<div style="text-align: left;"> <label>비밀번호</label> </div>
