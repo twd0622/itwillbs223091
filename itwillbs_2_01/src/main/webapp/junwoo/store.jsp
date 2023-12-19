@@ -4,10 +4,15 @@
 <html>
 <head>
     <meta charset="utf-8">
-    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
     <!-- 식당 이름으로 타이틀 지정 -->
     <title>식당 상세 페이지</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
 	<link href="css/store.css" rel="stylesheet" >
+	<link href="css/storeModal.css" rel="stylesheet">
+	<script src="js/jquery-3.6.0.js"></script>
+	<script src="js/storeModal.js"></script>
+	
 </head>
 
 <%@ include file="/Template/header.jsp"%> 
@@ -118,7 +123,7 @@
 				</div>
 				<!-- 메뉴 -->
 				<div class="menuBox">
-					<p class="tit">메뉴정보</p>
+					<p class="tit">대표 메뉴</p>
 						<ul class="list Restaurant_MenuList">
 							<li>
 								<p class="l-txt Restaurant_MenuItem"><span class="Restaurant_Menu">츠케멘</span></p>
@@ -142,6 +147,22 @@
 							</li>
 						</ul>
 				</div>
+				<div class="store_infoBOX">
+					<p class="tit">식당 설명</p>
+					<div>
+						<pre>
+[칸다소바 소개]
+
+장어덮밥 전문점 '해목' 을 운영중인 셰프가
+일본 도쿄 라멘 대회 우승 경력의 라멘 전문점 '칸다 와이즈' 에서
+직접 기술을 전수 받은 라멘 전문점입니다.
+
+라멘의 3요소인 면, 육수, 타래를
+각각의 메뉴에 조화롭도록 수작업으로
+제작하여 사용합니다.
+						</pre>
+					</div>	
+				</div>				
 				<!-- 테이블 -->
 				<div class="tableBox">
 					<p class="tit">테이블 예약</p>
@@ -159,11 +180,12 @@
 											<ul>
 												<li>최소인원: 2명</li>
 												<li>최대인원: 4명</li>
+												<li>이용 시간: 2시간</li>
 												<li>뷰: 오션뷰</li>
 											</ul>
 										</div>
 										<div style="width: 20%;">
-											<button class="btn btn-outline-warning" style="margin-top:80%">예약하기</button>
+											<button class="btn btn-outline-warning modalOpen" style="margin-top:80%">예약하기</button>
 										</div>
 									</div>
 								</div>
@@ -173,7 +195,7 @@
 							<div class="table_">
 								<div class="table_info" >
 									<div class="table_name_box">
-										<p class="table_name">A1</p>
+										<p class="table_name">A2</p>
 										<a style="text-align: right; font-size: 15px; line-height: 100%">상세 보기 ></a>
 									</div>
 									<div class="table_res">
@@ -181,11 +203,12 @@
 											<ul>
 												<li>최소인원: 2명</li>
 												<li>최대인원: 4명</li>
+												<li>이용 시간: 2시간</li>
 												<li>뷰: 오션뷰</li>
 											</ul>
 										</div>
 										<div style="width: 20%;">
-											<button class="btn btn-outline-warning" style="margin-top:60%">예약하기</button>
+											<button class="btn btn-outline-warning modalOpen" style="margin-top:60%">예약하기</button>
 										</div>
 									</div>
 								</div>
@@ -196,6 +219,41 @@
 			</div>
 		</div>
 	</main>
+	<div id="modalContainer" class="hidden">
+	  <div id="modalContent">
+	     <h4>예약</h4>
+	     <form action="">
+		     <div>
+		     	<h5>인원</h5>
+		     	<div>
+		     		<span>-</span>
+		     		<span>1</span>
+		     		<span>+</span>
+		     	</div>
+		     	<hr>
+		     	<h5>날짜</h5>
+		     	<input class="form-control" type="date" id="date">
+		     	<hr>
+				<h5>시간</h5>
+				<div style="display: flex; flex-direction: rows;">
+					<div class="time" style="border:2px solid black; width: 90px; height: 40px; font-size: 25px; font-weight: 300;bold; text-align: center; margin-right: 5px;">
+						13:00
+						<input type="radio" class="selectTime" name="time" value="13" style="display: none;">
+					</div>
+					<div class="time" style="border:2px solid black; width: 90px; height: 40px; font-size: 25px; font-weight: 300;bold; text-align: center; margin-right: 5px;">
+						14:00
+						<input type="radio" class="selectTime" name="time" value="13" style="display: none;">
+					</div>
+				</div>
+				<hr>
+		     </div>
+		     <div>
+			     <input class="btn btn-warning fw-bold text-light" type="submit" value="예약하기">
+				 <button type="button" class="btn btn-dark fw-bold" id="modalCloseButton">닫기</button>
+		     </div>
+	     </form>
+	  </div>
+	</div>
 	
 	
 <%@ include file="/Template/footer.jsp"%>
