@@ -7,15 +7,35 @@
     <!-- 식당 이름 넣어주기 -->
     <title>식당이름 / 메뉴 선택</title>
     <link href="css/menuChoice.css" rel="stylesheet" >
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+    
+    <script src="js/menuChoice.js"></script>
+    <script src="js/jquery-3.6.0.js"></script>
+	<script src="https://cdn.iamport.kr/v1/iamport.js"></script>
+	<script src="js/payment.js"></script>
 </head>
 
 <%@ include file="/Template/header.jsp"%> 
 	<!-- main은 속성 값은 왠만하면 건들지x -->
-	<main style="display: flex; justify-content: center; align-items: center; text-align: center; margin-top: 68.5px; padding:20px 0 50px 0; ">
+	<main style="display: flex; justify-content: center; align-items: center; text-align: center; margin-top: 100px; padding:20px 0 50px 0; ">
 		
 		<!-- 예시div style속성 값 조절해서 사용! -->
 		<div class="main_container">
 			<div class="paddingBox">
+				
+				<!-- 예약자 정보 -->
+				<div class="cusBox">	
+					<p class="tit">예약자 정보</p>
+					<div class="cus_infoBox">
+						<label for="cus_name">예약자 이름</label>
+						<input class="form-control" type="text" name="cus_name">
+					</div>
+					
+					<div class="cus_infoBox">
+						<label for="cus_phone">휴대폰 번호</label>
+						<input class="form-control" type="text" name="cus_phone">
+					</div>
+				</div>
 				
 				<!-- 메뉴판 -->
 				<div class="menuBox">	
@@ -33,7 +53,7 @@
 						</li>
 						<li>
 							<div class="menu">
-								<div class="menu_img"></div>
+								<img alt="츠케멘.jpg" src="츠케멘.jpg" class="menu_img">
 								<div class="menu_info" >
 									<div class="menu_name_box">
 										<p class="menu_name">츠케멘</p>
@@ -79,32 +99,38 @@
 							<span class="cart_sub_tit">메 뉴</span>
 							<ul>
 								<li class="choice_list">
-									<div>
+									<div style="display: flex; justify-content: space-around;">
 										<span>기본 예약금</span>
 										<span>10,000 원</span>
 									</div>
 								</li>
-								<li class="choice_list">
-									<div>
-										<span>마제소바 </span>
-										<span>12,000 원</span>
+								<li class="choice_list cart_menu">
+									<div style="width: 80%;">
+										<div>
+											<span>마제소바 </span>
+											<span>12,000 원</span>
+										</div>
+										<div class="count_box">
+											<span>-</span>
+											<span>1</span>
+											<span>+</span>
+										</div>
 									</div>
-									<div class="count_box">
-										<span>-</span>
-										<span>1</span>
-										<span>+</span>
-									</div>
+									<span class="material-symbols-outlined" style="font-size: 18px;">delete</span>
 								</li>
-								<li class="choice_list">
-									<div>
-										<span>츠케멘</span>
-										<span>12,000 원</span>
+								<li class="choice_list cart_menu">
+									<div style="width: 80%;">
+										<div>
+											<span>츠케멘 </span>
+											<span>12,000 원</span>
+										</div>
+										<div class="count_box">
+											<span>-</span>
+											<span>1</span>
+											<span>+</span>
+										</div>
 									</div>
-									<div class="count_box">
-										<span>-</span>
-										<span>1</span>
-										<span>+</span>
-									</div>
+									<span class="material-symbols-outlined" style="font-size: 18px;">delete</span>
 								</li>
 							</ul>
 						</div>
@@ -134,13 +160,13 @@
 							</div>
 						</div>
 						<div class="btn_box">
-							<input class="btn btn-warning fw-bold text-light" type="submit" value="예약하기">
+							<input class="btn btn-warning fw-bold text-light" type="submit" onclick="requestPay()" value="결제">
 						</div>
 					</div>
 				</div>	
 			</div>	
 		</div>
-		<div style="width:20%;"></div>
+		<div style="width:16%;"></div>
 	</main>
 <%@ include file="/Template/footer.jsp"%>
 </html> 

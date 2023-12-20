@@ -17,7 +17,7 @@
 
 <%@ include file="/Template/header.jsp"%> 
 	<!-- main은 속성 값은 왠만하면 건들지x -->
-	<main style="display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; margin-top: 68.5px; padding:20px 0 50px 0;">
+	<main style="display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; margin-top: 100px; padding:20px 0 50px 0;">
 		
 		<!-- 예시div style속성 값 조절해서 사용! -->
 		<div class="main_container">
