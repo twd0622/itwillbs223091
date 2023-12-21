@@ -1,12 +1,12 @@
+<%@ include file="/Template/header.jsp"%> 
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <!DOCTYPE html>
-<%@ include file="/Template/header.jsp"%> 
 <html>
 <head>
     <meta charset="utf-8">
     <!-- 식당 이름 넣어주기 -->
-    <title>식당이름 / 메뉴 선택</title>
+    <title>예약 수정</title>
     <link href="css/payment.css" rel="stylesheet" >
     <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
     
@@ -64,61 +64,10 @@
 						<span style="text-align: left">13:00</span>
 					</div>
 					<div class="checkBtnBox">
-						<button class="btn fw-bold text-light" style="background: #9CED92;">확정</button>
+						<button class="btn fw-bold text-light" style="background:#9CED92;">확정</button>
 					</div>
 				</div>				
 				
-				<!-- 메뉴판 -->
-				<div class="menuBox">	
-					<p class="tit">메뉴 선택</p>
-					<ul class="list">
-						<li>
-							<div class="menu">
-								<div class="menu_info">
-									<div class="menu_name_box">
-										<p class="menu_name">현장에서 선택 하기</p>
-										<p class="menu_price">기본 예약금 10,000 원</p>
-									</div>
-								</div>
-							</div>
-						</li>
-						<li>
-							<div class="menu">
-								<img alt="츠케멘.jpg" src="츠케멘.jpg" class="menu_img">
-								<div class="menu_info" >
-									<div class="menu_name_box">
-										<p class="menu_name">츠케멘</p>
-										<p class="menu_price"> 12,000 원</p>
-									</div>
-									<div class="menu_choice">
-										<div style="text-align: left;">
-											<p style="padding-left: 10px; margin: 0; font-size: 15px">
-												츠케멘은 츠케루(붙히다, 달다) 라는 뜻에서 붙여진 일본식 면에 육수를 찍어 먹는 라멘입니다
-											</p>
-										</div>
-									</div>
-								</div>
-							</div>
-						</li>
-						<li>
-							<div class="menu">
-								<div class="menu_info" >
-									<div class="menu_name_box">
-										<p class="menu_name">마제소바 </p>
-										<p class="menu_price"> 12,000 원</p>
-									</div>
-									<div class="menu_choice">
-										<div style="text-align: left;">
-											<p style="padding-left: 10px; margin:0; font-size: 15px">
-												국물없는 면에 고기, 채소, 계란 등 다양한 고명과 소스를 비벼 먹는 라멘입니다
-											</p>
-										</div>
-									</div>
-								</div>
-							</div>
-						</li>
-					</ul>
-				</div>
 				
 				<!-- 예약표 -->
 				<div class="cartBox">
@@ -202,7 +151,7 @@
 							</div>
 						</div>
 						<div class="btn_box">
-							<input class="btn fw-bold text-light" style="background:#9CED92; " type="submit" onclick="requestPay()" value="결제">
+							<input class="btn fw-bold text-light btn_color" style="background:#9CED92; font-size: 18px;" type="submit" onclick="requestPay()" value="변경">
 						</div>
 					</div>
 				</div>	
